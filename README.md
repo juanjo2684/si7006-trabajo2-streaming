@@ -6,10 +6,10 @@ Fecha de entrega: 30 de abril de 2026
 
 ## Equipo
 
-- Juan José Morales Guzmán — Tech Lead / Ingesta
-- [Nombre 2] — Procesamiento / Streaming
-- [Nombre 3] — Calidad y Eventos
-- [Nombre 4] — Visualización y Documentación
+- Juan José Morales
+- Sebastian Ruiz
+- Santiago Molano
+- Daniel pareja
 
 ## Caso de uso
 
@@ -80,7 +80,7 @@ si7006-trabajo2-streaming/
 1. Cuenta Databricks Free Edition con workspace activo.
 2. `OnlineRetail.csv` descargado (ver `data/README.md`).
 
-### Setup (una vez)
+### Setup
 
 1. En Catalog Explorer del workspace:
    - Crear schema `si7006_t2` en el catálogo `workspace`.
@@ -97,14 +97,14 @@ si7006-trabajo2-streaming/
 4. `02_silver_limpieza` → Run All.
 5. `03_gold_kpis` y `04_gold_alertas_reorder` → Run All.
 
-## Estado del proyecto
+## Etapas del proyecto
 
-- ✅ Fase 0 — Setup y validación
-- ✅ Fase 1 — Productor + Bronze
-- ✅ Fase 2 — Silver
-- ⏳ Fase 3 — Gold (KPIs y alertas)
-- ⏳ Fase 4 — Dashboard AI/BI
-- ⏳ Fase 5 — Informe + video
+- Fase 0 — Setup y validación
+- Fase 1 — Productor + Bronze
+- Fase 2 — Silver
+- Fase 3 — Gold (KPIs y alertas)
+- Fase 4 — Dashboard AI/BI
+- Fase 5 — Informe + video
 
 ## Decisiones técnicas clave
 
