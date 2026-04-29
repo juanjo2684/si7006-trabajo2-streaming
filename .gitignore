@@ -1,40 +1,27 @@
-# Datos crudos: NO se versionan archivos pesados
-data/*.csv
-data/*.parquet
-data/*.json
-!data/README.md
-
-# Python
+﻿# Python
 __pycache__/
 *.pyc
-*.pyo
 .venv/
 venv/
-.env
 
-# Databricks (archivos locales del CLI si lo usan)
+# IDE
+.vscode/
+.idea/
+
+# Databricks
 .databricks/
-.databricks-ide/
 
-# Sistema operativo
+# Datos pesados (no versionar)
+data/*.csv
+data/*.xlsx
+*.parquet
+
+# Sistema
 .DS_Store
 Thumbs.db
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+# Notebooks: outputs de Jupyter
+*.ipynb_checkpoints/
 
-# Logs y outputs locales
-*.log
-checkpoints/
-output/
-spark-warehouse/
-
-# Notebooks Jupyter (si alguien los usa localmente)
-.ipynb_checkpoints/
-
-# Imágenes pesadas (opcional, descomentar si las evidencias son muy grandes)
-# evidencias/**/*.png
-# evidencias/**/*.jpg
+# Git temporal
+*.orig
