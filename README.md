@@ -67,10 +67,9 @@ si7006-trabajo2-streaming/
 ├── data/
 │   └── README.md
 ├── docs/
-│   ├── informe_tecnico.md
-│   └── declaraciones.md
-└── video/
-└── guion_video.md
+    ├── informe_tecnico.md
+    └── declaraciones.md
+
 ```
 
 ## Cómo reproducir
