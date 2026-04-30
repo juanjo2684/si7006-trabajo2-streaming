@@ -1,19 +1,19 @@
 # SI7006 - Trabajo 2: Pipeline streaming end-to-end en Databricks
 
-Maestria en Ciencia de Datos y Analitica - Universidad EAFIT - 2026-1
+Maestría en Ciencia de Datos y Analítica - Universidad EAFIT - 2026-1
 Curso: SI7006 Almacenamiento y Procesamiento de Grandes Datos
 Fecha de entrega: 30 de abril de 2026
 
 ## Equipo
 
-- Juan Jose Morales
+- Juan José Morales
 - Sebastian Ruiz
 - Santiago Molano
 - Daniel Pareja
 
 ## Caso de uso
 
-Monitoreo en tiempo real de ordenes en retail/e-commerce usando el
+Monitoreo en tiempo real de órdenes en retail/e-commerce usando el
 dataset `OnlineRetail.csv` como fuente de eventos simulados.
 
 ## Arquitectura
@@ -80,7 +80,7 @@ si7006-trabajo2-streaming/
     `-- declaraciones.md
 ```
 
-## Como reproducir
+## Cómo reproducir
 
 ### Prerrequisitos
 
@@ -90,7 +90,7 @@ si7006-trabajo2-streaming/
 ### Setup
 
 1. En Catalog Explorer del workspace:
-   - Crear schema `si7006_t2` en el catalogo `workspace`.
+   - Crear schema `si7006_t2` en el catálogo `workspace`.
    - Crear 3 Volumes (Managed): `raw_data`, `stream_input`, `checkpoints`.
    - Subir `OnlineRetail.csv` al volume `raw_data`.
 2. Importar los `.ipynb` de `notebooks/` y `productor/` como notebooks.
@@ -99,13 +99,13 @@ si7006-trabajo2-streaming/
 ### Corrida del pipeline
 
 1. `01_bronze_ingesta` -> Run All. Dejar corriendo.
-2. `productor_eventos` -> Run All en otra pestana inmediatamente despues.
+2. `productor_eventos` -> Run All en otra pestaña inmediatamente después.
 3. Esperar a que ambos terminen (~4 min).
 4. `02_silver_limpieza` -> Run All.
 5. `03_gold_kpis` -> Run All.
 6. `04_gold_alertas_reorder` -> Run All.
 
-## Que construye la Gold
+## Qué construye la Gold
 
 - `gold_kpi_ventana` materializa KPIs por ventanas de 1 minuto sobre
   `orders_silver`.
@@ -117,20 +117,20 @@ si7006-trabajo2-streaming/
 
 ## Etapas del proyecto
 
-- Fase 0 - Setup y validacion
+- Fase 0 - Setup y validación
 - Fase 1 - Productor + Bronze
 - Fase 2 - Silver
 - Fase 3 - Gold (KPIs y alertas)
 - Fase 4 - Dashboard AI/BI
 - Fase 5 - Informe + video
 
-## Decisiones tecnicas clave
+## Decisiones técnicas clave
 
-| Decision | Justificacion |
+| Decisión | Justificación |
 |---|---|
 | Lotes de 50 eventos por archivo JSON | Evita el "small files problem" en Delta |
 | Auto Loader (`cloudFiles`) | Manejo nativo de archivos incrementales y schema |
-| Schema explicito | Documenta el contrato de la fuente |
+| Schema explícito | Documenta el contrato de la fuente |
 | `Trigger.AvailableNow` + loop Python | Free Edition serverless no soporta triggers infinitos |
 | `InvoiceDate` reescrito con `now()` en productor | Permite que las ventanas de Gold trabajen sobre tiempos coherentes |
 | `dropDuplicatesWithinWatermark` 24h | Dedup stateful con estado acotado |
