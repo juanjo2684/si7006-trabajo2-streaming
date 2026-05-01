@@ -34,19 +34,16 @@
 
 - Notebook `02_silver_limpieza` con dedup stateful y watermark.
 - Resolución del problema de trigger en Free Edition.
-- Documentación técnica.
 
 ### Santiago Molano
 
--
--
--
+- Notebook `03_gold_kpis`
+- Notebook `03_gold_alertas_reorden`
 
 ### Daniel Pareja
 
--
--
--
+- Consultas SQL
+- Diseño y generacion de dashboard
 
 ## 4. Declaración firmada
 
