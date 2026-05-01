@@ -57,18 +57,31 @@ si7006-trabajo2-streaming/
 ├── README.md
 ├── .gitignore
 ├── notebooks/
-│   ├── 00_setup_validacion.py
-│   ├── 01_bronze_ingesta.py
-│   ├── 02_silver_limpieza.py
-│   ├── 03_gold_kpis.py
-│   └── 04_gold_alertas_reorder.py
+│   ├── 00_setup_validacion.ipynb
+│   ├── 01_bronze_ingesta.ipynb
+│   ├── 02_silver_limpieza.ipynb
+│   ├── 03_gold_kpis.ipynb
+│   └── 04_gold_alertas_reorder.ipynb
 ├── productor/
-│   └── productor_eventos.py
+│   └── productor_eventos.ipynb
+├── queries/
+│   ├── 01_revenue_total.sql
+│   ├── 02_pedidos_totales.sql
+│   ├── 03_unidades_vendidas.sql
+│   ├── 04_revenue_por_minuto.sql
+│   ├── 05_pedidos_por_minuto.sql
+│   ├── 06_unidades_vendidas_por_minuto.sql
+│   ├── 07_pedidos_guest_por_minuto.sql
+│   ├── 08_alertas_por_nivel.sql
+│   ├── 09_top_productos_menor_stock.sql
+│   └── 10_detalle_alertas.sql
 ├── data/
 │   └── README.md
 ├── docs/
-    ├── informe_tecnico.md
-    └── declaraciones.md
+│   ├── informe_tecnico.md
+│   └── declaraciones.md
+└── video/
+    └── demo_pipeline.mp4
 
 ```
 
